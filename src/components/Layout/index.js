@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core';
+import { Box, makeStyles } from '@material-ui/core';
 import Head from 'next/head';
 
 import TopBar from './TopBar';
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flex: '1 1 auto',
     overflow: 'hidden',
-    paddingTop: '64',
+    paddingTop: 64,
     [theme.breakpoints.up('lg')]: {
       paddingLeft: 256,
     },
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flex: '1 1 auto',
     overflow: 'hidden',
-  
+
   },
   content: {
     flex: '1 1 auto',
@@ -44,19 +44,24 @@ function Layout({ children, title }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
-        <link 
-         rel="shortcut icon" 
-         href="https://www.youtube.com/s/desktop/a386e432/img/favicon.ico" 
-         type="image/x-icon" />
+        <link
+          rel="shortcut icon"
+          href="https://www.youtube.com/s/desktop/a386e432/img/favicon.ico"
+          type="image/x-icon" />
       </Head>
 
-      <div className={classes.root}>
-       <TopBar />
-       <NavBar />
-        <div>navbar</div>
+      <Box className={classes.root}>
+        <TopBar />
+        <NavBar />
 
-        <div>{children}</div>
-      </div>
+        <Box className={classes.wrapper}>
+          <Box className={classes.contentContainer}>
+            <Box className={classes.content} >
+              {children}
+            </Box>
+          </Box>
+        </Box>
+      </Box>
     </>
   )
 }

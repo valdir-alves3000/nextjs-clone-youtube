@@ -87,7 +87,6 @@ const secondaryMenu = [
   {
     id: 2,
     label: 'Histórico',
-    path: '/',
     icon: History,
   },
 ];
@@ -126,6 +125,32 @@ function NavBar() {
         })}
       </List>
       <Divider />
+
+      <List>
+        {secondaryMenu.map((item) => {
+          const Icon = item.icon;
+
+          return (
+            <ListItem
+              key={item.id}
+              button
+              classes={{ root: classes.listItem }}
+              selected={isSelected(item)}
+            >
+              <ListItemIcon>
+                <Icon style={{ color: isSelected(item) && '#f44336' }} />
+              </ListItemIcon>
+
+              <ListItemText
+                classes={{ primary: classes.listItemText }}
+                primary={item.label}
+              />
+            </ListItem>
+          )
+        })}
+      </List>
+      <Divider />
+
       <Box mx={4} my={2}>
         <Typography variant="body2">
           Faça login para curtir vídeos, comentar e se inscrever.

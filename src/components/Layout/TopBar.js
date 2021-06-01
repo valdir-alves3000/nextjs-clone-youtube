@@ -23,7 +23,7 @@ import {
 const useStyles = makeStyles((theme) => ({
   root: {
     boxShadow: 'none',
-    zIndex: theme.zIndex.drawer + 1,
+    zIndex: theme.zIndex.drawer - 1,
     backgroundColor: theme.palette.background.default,
   },
 
