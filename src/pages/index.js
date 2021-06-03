@@ -3,6 +3,7 @@ import { Box, Grid } from '@material-ui/core';
 
 import Layout from '../components/Layout';
 import VideoCard from '../components/VideoCard';
+import getVideos from '../database/getVideos';
 
 function Home({ data }) {
   return (
@@ -21,50 +22,7 @@ function Home({ data }) {
 }
 
 export async function getStaticProps() {
-  const data = [
-    {
-      id: 1,
-      title: 'video 1',
-      authorId: 1,
-      authorName: 'Lucas Nhimi',
-      views: 10,
-      thumb: '/thumbs/game-over.jpg',
-      videoUrl: 'url',
-      updateAt: new Date(),
-    },
-    {
-      id: 2,
-      title: 'video 2',
-      authorId: 1,
-      authorName: 'Lucas Nhimi',
-      views: 10,
-      thumb: '/thumbs/image-blog.jpg',
-      videoUrl: 'url',
-      updateAt: new Date(),
-    },
-    {
-      id: 3,
-      title: 'video 3',
-      authorId: 1,
-      authorName: 'Lucas Nhimi',
-      views: 10,
-      thumb: '/thumbs/game-over.jpg',
-      videoUrl: 'url',
-      updateAt: new Date(),
-    },
-    
-    {
-      id: 4,
-      title: 'video 4',
-      authorId: 1,
-      authorName: 'Lucas Nhimi',
-      views: 10,
-      thumb: '/thumbs/image-blog.jpg',
-      videoUrl: 'url',
-      updateAt: new Date(),
-    },
-    
-  ];
+  const data = await getVideos();
 
   return {
         props: {
