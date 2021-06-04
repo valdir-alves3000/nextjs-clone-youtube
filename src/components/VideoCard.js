@@ -37,7 +37,7 @@ function VideoCard({ item }) {
       <Box display="flex" mt={1} >
         <Box mr={2}>
           <Avatar alt={item.authorName} src={item.authorAvatar}>
-            VSA
+            V
           </Avatar>
         </Box>
 

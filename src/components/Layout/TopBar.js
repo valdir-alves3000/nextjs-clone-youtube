@@ -1,5 +1,6 @@
 import {
   AppBar,
+  Avatar,
   Box,
   Button,
   IconButton,
@@ -19,6 +20,8 @@ import {
   Search,
   VideoCall
 } from '@material-ui/icons';
+
+import { signIn, signOut, useSession } from 'next-auth/client';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -55,6 +58,7 @@ const useStyles = makeStyles((theme) => ({
 
 function TopBar() {
   const classes = useStyles();
+  const [session] = useSession();
 
   return (
     <AppBar className={classes.root} color="default">
@@ -99,14 +103,26 @@ function TopBar() {
             <MoreVert />
           </IconButton>
 
-          <Button
-            color="secondary"
-            component="a"
-            variant="outlined"
-            startIcon={<AccountCircle />}
-          >
-            Fazer Login
-          </Button>
+          {!session ? (
+            <Button
+              color="secondary"
+              component="a"
+              variant="outlined"
+              startIcon={<AccountCircle />}
+              onClick={() => signIn('google')}
+            >
+              Fazer Login
+            </Button>
+          ) : (
+            <Box display="flex" alignItems="center">
+              <Avatar
+                onClick={() => signOut()}
+                alt="User"
+                className={classes.avatar}
+                src={session?.user?.image}
+              />
+            </Box>
+          )}
         </Box>
       </Toolbar>
     </AppBar>
