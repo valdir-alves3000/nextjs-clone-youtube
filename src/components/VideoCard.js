@@ -8,11 +8,15 @@ import {
 import days from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 
+import { useRouter } from 'next/router';
+import Image from 'next/image';
+
 days.extend(relativeTime);
 
 const useStyles = makeStyles(() => ({
   img: {
     width: '100%',
+    cursor: 'pointer',
   },
   caption: {
     fontWeight: 500,
@@ -25,13 +29,25 @@ const useStyles = makeStyles(() => ({
 
 function VideoCard({ item }) {
   const classes = useStyles();
+  const router = useRouter();
+
+  function openVideo(item) {
+    router.push({
+      pathname: '/video/[id]',
+      query: { id: item._id }
+    })
+  }
 
   return (
     <Box >
-      <img 
-      className={classes.img}
-      src={item.thumb} 
-      alt={item.title} 
+      <Image
+        width={500}
+        height={300}
+        className={classes.img}
+        src={item.thumb}
+        alt={item.title}
+        onClick={() => openVideo(item)}
+        layout="intrinsic"
       />
 
       <Box display="flex" mt={1} >
@@ -43,10 +59,10 @@ function VideoCard({ item }) {
 
         <Box>
           <Typography
-          className={classes.caption}
-          gutterBottom
-          variant="body1"
-          color="textPrimary"
+            className={classes.caption}
+            gutterBottom
+            variant="body1"
+            color="textPrimary"
           >
             {item.title}
           </Typography>
@@ -57,7 +73,7 @@ function VideoCard({ item }) {
         </Box>
 
       </Box>
-      </Box>
+    </Box>
   );
 }
 

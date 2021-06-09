@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   AppBar,
   Avatar,
@@ -15,10 +16,12 @@ import {
 import {
   Apps,
   AccountCircle,
+  Brightness4,
+  Brightness7,
   Menu,
   MoreVert,
   Search,
-  VideoCall
+  VideoCall,  
 } from '@material-ui/icons';
 
 import { signIn, signOut, useSession } from 'next-auth/client';
@@ -59,6 +62,7 @@ const useStyles = makeStyles((theme) => ({
 function TopBar() {
   const classes = useStyles();
   const [session] = useSession();
+  const [dark, setDark] = useState(false);
 
   return (
     <AppBar className={classes.root} color="default">
@@ -90,7 +94,20 @@ function TopBar() {
           </Box>
         </Hidden>
 
-        <Box display='flex' alignItems='center'>
+        <Box display='flex' alignItems='center'>         
+          
+         {
+           dark ?(
+            <IconButton className={classes.icons}>
+            <Brightness4 onClick={() => setDark(prev => !prev)} />
+          </IconButton>
+           ) :(
+            <IconButton className={classes.icons}>
+            <Brightness7 onClick={() => setDark(prev => !prev)}/>
+          </IconButton>
+           )
+         }
+
           <IconButton className={classes.icons}>
             <VideoCall />
           </IconButton>
