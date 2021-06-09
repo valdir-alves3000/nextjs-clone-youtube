@@ -1,44 +1,81 @@
 # Clone youtube com NextJs + Material-UI
 
+Tabela de conteúdo
+---
+<!--ts-->
+   * [Sobre](#sobre)
+   * [Tabela de Conteúdo](#tabela-de-conteúdo)
+   * [Pré Requisitos](#pré-requisitos)
+   * [Tecnologias](#tecnologias)
+   * [Status do Projeto](#status-do-projeto)
+   * [Autor](#autor)
+<!--te-->
+
 ## Sobre
 
-Clone da Interface inicial do Youtube
+Este projeto representa uma tela clone da intarface inicial do Youtube.
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Youtube Clone](https://github.com/valdir-alves3000/portfolio/blob/master/public/icons/youtube-clone.png?raw=true)
 
-## Getting Started
 
-First, run the development server:
+## Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+## 🎲 Rodando o Back End (servidor)
 
 ```bash
-npm run dev
-# or
-yarn dev
+# Clone este repositório
+$ git clone https://github.com/valdir-alves3000/Sql-nodejs-sequelize.git
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd Sql-nodejs-sequelize
+
+
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm start
+
+# O servidor inciará na porta:3333 - acesse <http://localhost:3333>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tecnologias
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Node.js](https://nodejs.org/en/)
+- [Next.js](https://nextjs.org/)
+- [Next-connect](https://github.com/hoangvvo/next-connect)
+- [ESLint](https://eslint.org/)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [MongoDB](https://www.mongodb.com/)
+- [AWS S3](https://aws.amazon.com/pt/s3/)
+- [Multer S3](https://github.com/badunk/multer-s3)
+- [Insomnia](https://insomnia.rest/download/)
+- [Next-auth](https://next-auth.js.org/)
+- [NProgress](https://ricostacruz.com/nprogress/)
+- [Console Google](https://console.developers.google.com)
 
 ## Status do Projeto
 
 🚧  Next Select 🚀 Em construção...  🚧
+
+### Autor
+---
+
+<a href="https://github.com/valdir-alves3000/">
+ <img style="border-radius: 50%; margin-bottom: 10px;" src="https://github.com/valdir-alves3000.png" width="100px;" alt=""/>
+ <br />
+ <sub style="margin-right: 1rem;"><b>Valdir Alves </b></sub>🚀</a> 
+
+
+Feito com ❤️ por Valdir Alves 👋🏽 Entre em contato!
+- [x] com apoio de [Lucas Nhimi](https://www.youtube.com/playlist?list=PLkFMdTTdI9c3dqQ9rp-I49SQ0-9AjOVHR)
+
+ [![Linkedin Badge](https://img.shields.io/badge/-Valdir-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/valdiralves3000/)](http://linkedin.com/in/valdiralves3000) 
+[![Gmail Badge](https://img.shields.io/badge/-valdiralves3000@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:valdiralves3000@gmail.com)](mailto:valdiralves3000@gmail.com)
+
