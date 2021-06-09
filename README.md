@@ -15,7 +15,9 @@ Tabela de conteúdo
 
 Este projeto representa uma tela clone da intarface inicial do Youtube.
 
-![Youtube Clone](https://github.com/valdir-alves3000/portfolio/blob/master/public/icons/youtube-clone.png?raw=true)
+<h1 align="center">
+  <img alt="youtube-clone" title="youtube-clone" src="https://raw.githubusercontent.com/valdir-alves3000/nextjs-clone-youtube/main/public/thumbs/youtube-clone.png" width="500px" />
+</h1>
 
 
 ## Pré-requisitos
@@ -36,13 +38,13 @@ $ cd nextjs-clone-youtube
 
 # Instale as dependências
 $ npm install
-or
+or 
 $ yarn install
 
 # Execute a aplicação em modo de desenvolvimento
-$ npm run dev
-or
-$ yarn dev
+$ npm start
+or 
+yarn dev
 
 # O servidor inciará na porta:3000 - acesse <http://localhost:3000>
 ```
